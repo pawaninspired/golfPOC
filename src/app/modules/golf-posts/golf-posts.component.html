@@ -1,0 +1,27 @@
+<div class="select-options">
+    <mat-form-field appearance="fill">
+        <mat-label>Category</mat-label>
+        <mat-select [(value)]="selectedCatrgory" (selectionChange)="updateOpt()">
+          <mat-option *ngFor="let item of categories" [value]="item.value">
+            {{item.viewValue}}
+          </mat-option>
+        </mat-select>
+      </mat-form-field>
+      <mat-form-field appearance="fill">
+        <mat-label>Post per page</mat-label>
+        <mat-select [(value)]="postLength" (selectionChange)="updateOpt()">
+          <mat-option *ngFor="let item of postlengths" [value]="item.value">
+            {{item.viewValue}}
+          </mat-option>
+        </mat-select>
+      </mat-form-field>
+</div>
+<div class="cards">
+    <div *ngFor="let post of postList">
+        <app-box [item]="post"></app-box>
+    </div>
+</div>
+<div class="pagination">
+    <span class="prev" *ngIf="clickcounter"><img src="./../../../assets/images/chvr2.png" (click)="paginate('prev')"></span> {{clickcounter+1}}
+    <span class="next"><img src="./../../../assets/images/chvr2.png" (click)="paginate('next')"></span>
+</div>

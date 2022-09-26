@@ -1,0 +1,21 @@
+<mat-card [ngClass]="{'active' : togglecard}">
+    <div class="thumbnail" *ngIf="item.data.thumbnail && item.data.thumbnail != 'self' && item.data.thumbnail != 'spoiler' "><img src="{{item.data.thumbnail}}"></div>
+    <div class="container">
+        <div class="align--right">
+            <div class="comment"> <img src="./../../../assets/images/comment.png"> {{item.data.num_comments}}</div>
+            <div class="score"> <img src="./../../../assets/images/updutt.png"> {{item.data.score}}</div>
+        </div>
+        <div>
+            <h1>{{item.data.title}}</h1>
+            <div class="content"><p> {{item.data.selftext}}</p></div>
+            
+        </div>
+        <div class="align--right">
+            <div class="author"> Posted {{item.data.daysAgo }} days ago by <span>{{item.data.author}}</span></div>
+            <div (click)="toggleCard()" *ngIf="item.data.selftext"> 
+                <span class="show-more">Show more <img src="./../../../../assets/images/chvr1.png"/></span>
+                <span class="show-less">Show Less <img src="./../../../../assets/images/chvr1.png"/></span>
+            </div>
+        </div>
+    </div>
+</mat-card>

@@ -1,0 +1,38 @@
+.cards{
+    max-width: 800px;
+    margin: auto;
+}
+img{
+    vertical-align: sub;
+}
+
+
+.pagination{
+    padding: 40px 0;
+    text-align: center;
+    color: #fff;
+    font-size: 24px;
+    .prev{
+        margin-right: 20px;
+        cursor: pointer;
+        
+    }
+    .next {
+        margin-left: 20px;
+        cursor: pointer;
+        img{
+        -webkit-transform: scaleX(-1);
+        transform: scaleX(-1);
+        }
+    }
+}
+::ng-deep  .select-options{
+    max-width: 800px;
+    margin: auto;
+    .mat-form-field-flex{
+        background-color: #fff; 
+    }
+     mat-form-field{
+        margin-right: 20px;
+    }
+}
