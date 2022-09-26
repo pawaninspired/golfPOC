@@ -6,7 +6,6 @@ import { AppComponent } from './app.component';
 
 import { WelcomePageComponent } from './welcome-page/welcome-page.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import {MatButtonModule} from '@angular/material/button';
 import { HttpClientModule } from '@angular/common/http';
 
 
@@ -19,7 +18,6 @@ import { HttpClientModule } from '@angular/common/http';
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
-    MatButtonModule,
     HttpClientModule
   ],
   providers: [],

@@ -1,4 +1,4 @@
-<mat-card [ngClass]="{'active' : togglecard}">
+<div class="mat-card" [ngClass]="{'active' : togglecard}">
     <div class="thumbnail" *ngIf="item.data.thumbnail && item.data.thumbnail != 'self' && item.data.thumbnail != 'spoiler' "><img src="{{item.data.thumbnail}}"></div>
     <div class="container">
         <div class="align--right">
@@ -18,4 +18,4 @@
             </div>
         </div>
     </div>
-</mat-card>
+</div>
