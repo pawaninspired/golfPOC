@@ -53,6 +53,7 @@ export class GolfPostsComponent implements OnInit {
     this.postlistService.getList(category,FLitemName,action,postlength).subscribe(posts => {this.postList = posts});
   }
   updateOpt(){
+    console.log(this.selectedCatrgory);
     this.getPosts(this.selectedCatrgory, "", "", this.postLength)
     this.clickcounter = 0
   }

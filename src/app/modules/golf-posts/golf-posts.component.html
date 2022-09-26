@@ -1,20 +1,23 @@
 <div class="select-options">
-    <mat-form-field appearance="fill">
-        <mat-label>Category</mat-label>
-        <mat-select [(value)]="selectedCatrgory" (selectionChange)="updateOpt()">
-          <mat-option *ngFor="let item of categories" [value]="item.value">
+
+        <label>Category</label>
+        <select [(ngModel)]="selectedCatrgory" (ngModelChange)="updateOpt()" >
+          <option *ngFor="let item of categories" [ngValue]="item.value">
             {{item.viewValue}}
-          </mat-option>
-        </mat-select>
-      </mat-form-field>
-      <mat-form-field appearance="fill">
-        <mat-label>Post per page</mat-label>
-        <mat-select [(value)]="postLength" (selectionChange)="updateOpt()">
-          <mat-option *ngFor="let item of postlengths" [value]="item.value">
+          </option>
+        </select>
+        <label>Post per page</label>
+        <select [(ngModel)]="postLength" (ngModelChange)="updateOpt()" >
+          <option *ngFor="let item of postlengths" [value]="item.value">
             {{item.viewValue}}
-          </mat-option>
-        </mat-select>
-      </mat-form-field>
+          </option>
+        </select>
+        <!-- <select [(ngModel)]="postLength" (selectionChange)="updateOpt()">
+          <option *ngFor="let item of postlengths" [value]="item.value">
+            {{item.viewValue}}
+          </option>
+        </select> -->
+
 </div>
 <div class="cards">
     <div *ngFor="let post of postList">
